@@ -1,65 +1,239 @@
 <!DOCTYPE html>
-<h2>Certificação Profissional</h2>
-<p>Ao concluir o curso, você receberá um certificado reconhecido que comprova suas habilidades como profissional de micropigmentação.</p>
-</section>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de Micropigmentação Profissional</title>
 
+  <style>
+    :root {
+      --purple: #2b003b;
+      --white: #ffffff;
+      --pink: #ff66a3;
+      --gold: gold;
+      --muted: #f7f2f9;
+    }
 
-<section class="section-dark">
-<h2>Resultados Reais</h2>
-<div class="curso-grid">
-<img src="https://via.placeholder.com/400x300" style="border-radius: 12px;">
-<img src="https://via.placeholder.com/400x300" style="border-radius: 12px;">
-<img src="https://via.placeholder.com/400x300" style="border-radius: 12px;">
-<img src="https://via.placeholder.com/400x300" style="border-radius: 12px;">
-</div>
-</section>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--white);
+      color: var(--purple);
+    }
 
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      text-align: center;
+    }
 
-<section class="section-light">
-<h2>Conteúdo do Curso</h2>
-<div class="curso-grid">
-<div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Como imprimir o certificado</h3></div>
-<div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Design de Sobrancelhas</h3></div>
-<div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Biossegurança</h3></div>
-<div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Anamnese</h3></div>
-<div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Colorimetria</h3></div>
-<div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Microblading</h3></div>
-<div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Treino com Dermógrafo</h3></div>
-<div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Shadow Line</h3></div>
-<div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Shadow</h3></div>
-<div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Anestésico</h3></div>
-<div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Fogocitose</h3></div>
-<div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Correção</h3></div>
-<div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Aula Prática</h3></div>
-<div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Microlabial</h3></div>
-</div>
-</section>
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6rem;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
 
+    /* HERO */
+    .hero {
+      width: 100%;
+      height: 50vh;
+      background: url('Micropigmentação Esfumaçada.jpg') center/cover no-repeat;
+      filter: brightness(0.75) blur(3px);
+      position: relative;
+    }
 
-<section class="section-dark">
-<h2>Perguntas Frequentes</h2>
-<div class="faq-container">
-<div class="faq-item" onclick="toggleFAQ(this)"><strong>Quanto tempo tenho de acesso ao curso?</strong><div class="faq-answer">Você terá acesso completo por 1 ano.</div></div>
-<div class="faq-item" onclick="toggleFAQ(this)"><strong>O curso emite certificado?</strong><div class="faq-answer">Sim! Após finalizar as aulas, você pode emitir seu certificado.</div></div>
-<div class="faq-item" onclick="toggleFAQ(this)"><strong>As aulas são gravadas ou ao vivo?</strong><div class="faq-answer">As aulas são 100% online e gravadas.</div></div>
-<div class="faq-item" onclick="toggleFAQ(this)"><strong>Posso assistir no celular?</strong><div class="faq-answer">Sim! O curso funciona em qualquer dispositivo.</div></div>
-<div class="faq-item" onclick="toggleFAQ(this)"><strong>Tem garantia?</strong><div class="faq-answer">Sim, você tem 7 dias de garantia para testar o conteúdo.</div></div>
-</div>
-</section>
+    .hero-text {
+      position: absolute;
+      top: 30%;
+      width: 100%;
+      text-align: center;
+      color: var(--white);
+    }
 
+    .hero-text h1 {
+      font-size: 2.8rem;
+      margin: 0;
+    }
 
-<footer>
-Este site é uma página de divulgação independente criada por afiliado autorizado. © 2025
-</footer>
+    .hero-text p {
+      filter: none;
+      margin-top: 10px;
+    }
 
+    .btn {
+      display: inline-block;
+      background: var(--pink);
+      color: var(--white);
+      padding: 15px 35px;
+      border-radius: 50px;
+      font-weight: bold;
+      margin-top: 25px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
 
-<script>
-function toggleFAQ(el) {
-const answer = el.querySelector('.faq-answer');
-answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-}
-</script>
+    .btn:hover {
+      background: var(--gold);
+      color: var(--purple);
+    }
 
+    /* SEÇÕES INTERCALADAS */
+    .section-light {
+      background: var(--white);
+      color: var(--purple);
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .section-dark {
+      background: var(--purple);
+      color: var(--white);
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    /* GRID DO CURSO */
+    .curso-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 40px auto;
+    }
+
+    .curso-card {
+      background: var(--muted);
+      color: var(--purple);
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .curso-card:hover {
+      transform: scale(1.03);
+    }
+
+    .curso-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+
+    /* FAQ */
+    .faq-container {
+      max-width: 800px;
+      margin: 40px auto;
+      text-align: left;
+    }
+
+    .faq-item {
+      background: var(--light-purple);
+      margin-bottom: 10px;
+      padding: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      color: var(--white);
+      transition: 0.3s;
+    }
+
+    .faq-item:hover {
+      background: #9a2fc4;
+    }
+
+    .faq-answer {
+      display: none;
+      padding-top: 10px;
+      color: var(--white);
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      font-size: 0.9rem;
+      color: var(--white);
+      background: var(--purple);
+    }
+
+    @media (max-width: 768px) {
+      h2 { font-size: 1.8rem; }
+      .hero-text h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero"></div>
+  <div class="hero-text">
+    <h1>Curso de Micropigmentação Profissional</h1>
+    <p>Aprenda todas as técnicas essenciais para se tornar referência na micropigmentação.</p>
+    <a href="#" class="btn">Quero me inscrever agora</a>
+  </div>
+
+  <!-- SEÇÃO 1 - CLARA -->
+  <section class="section-light">
+    <h2>Certificação Profissional</h2>
+    <p>Ao concluir o curso, você receberá um certificado reconhecido que comprova suas habilidades como profissional de micropigmentação.</p>
+  </section>
+
+  <!-- SEÇÃO 2 - ESCURA -->
+  <section class="section-dark">
+    <h2>Resultados Reais</h2>
+    <div class="curso-grid">
+      <img src="https://via.placeholder.com/400x300" style="border-radius: 12px;">
+      <img src="https://via.placeholder.com/400x300" style="border-radius: 12px;">
+      <img src="https://via.placeholder.com/400x300" style="border-radius: 12px;">
+      <img src="https://via.placeholder.com/400x300" style="border-radius: 12px;">
+    </div>
+  </section>
+
+  <!-- SEÇÃO 3 - CLARA -->
+  <section class="section-light">
+    <h2>Conteúdo do Curso</h2>
+    <div class="curso-grid">
+      <div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Como imprimir o certificado</h3></div>
+      <div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Design de Sobrancelhas</h3></div>
+      <div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Biossegurança</h3></div>
+      <div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Anamnese</h3></div>
+      <div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Colorimetria</h3></div>
+      <div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Microblading</h3></div>
+      <div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Treino com Dermógrafo</h3></div>
+      <div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Shadow Line</h3></div>
+      <div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Shadow</h3></div>
+      <div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Anestésico</h3></div>
+      <div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Fogocitose</h3></div>
+      <div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Correção</h3></div>
+      <div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Aula Prática</h3></div>
+      <div class="curso-card"><img src="https://via.placeholder.com/300x200"><h3>Microlabial</h3></div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 4 - ESCURA -->
+  <section class="section-dark">
+    <h2>Perguntas Frequentes</h2>
+    <div class="faq-container">
+      <div class="faq-item" onclick="toggleFAQ(this)"><strong>Quanto tempo tenho de acesso ao curso?</strong><div class="faq-answer">Você terá acesso completo por 1 ano.</div></div>
+      <div class="faq-item" onclick="toggleFAQ(this)"><strong>O curso emite certificado?</strong><div class="faq-answer">Sim! Após finalizar as aulas, você pode emitir seu certificado.</div></div>
+      <div class="faq-item" onclick="toggleFAQ(this)"><strong>As aulas são gravadas ou ao vivo?</strong><div class="faq-answer">As aulas são 100% online e gravadas.</div></div>
+      <div class="faq-item" onclick="toggleFAQ(this)"><strong>Posso assistir no celular?</strong><div class="faq-answer">Sim! O curso funciona em qualquer dispositivo.</div></div>
+      <div class="faq-item" onclick="toggleFAQ(this)"><strong>Tem garantia?</strong><div class="faq-answer">Sim, você tem 7 dias de garantia para testar o conteúdo.</div></div>
+    </div>
+  </section>
+
+  <footer>
+    Este site é uma página de divulgação independente criada por afiliado autorizado. © 2025
+  </footer>
+
+  <script>
+    function toggleFAQ(el) {
+      const answer = el.querySelector('.faq-answer');
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 
 </body>
 </html>
