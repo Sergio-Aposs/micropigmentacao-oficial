@@ -189,20 +189,34 @@
     section, header {
       animation: fadeIn 1.5s ease;
     }
+    
+    #certificado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* centraliza horizontalmente */
+  justify-content: center; /* centraliza verticalmente */
+  text-align: center; /* garante que o texto fique centralizado dentro do bloco */
+  padding: 60px 20px; /* espaço interno */
+  min-height: 200px; /* altura mínima para centralização vertical */
+}
+
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Curso de Micropigmentação Profissional</h1>
-    <p>Aprenda com especialistas tudo sobre técnicas de sobrancelhas e lábios pigmentados, do básico ao avançado, com certificado incluso.</p>
+    <h1>Curso de Micropigmentação Profissional com Priscila Rodrigues</h1>
+    <p>Aprenda técnicas avançadas de micropigmentação para sobrancelhas e lábios, com suporte e comunidade exclusiva.</p>
     <a href="#" class="btn">Quero me inscrever agora</a>
   </header>
 
-  <section class="white-section">
-    <h2>Certificação Profissional</h2>
-    <p>Ao concluir o curso, você receberá um certificado reconhecido, comprovando sua formação em micropigmentação e suas habilidades profissionais.</p>
-  </section>
+ <section id="certificado">
+  <h2>Certificação Profissional</h2>
+  <p>
+    Ao concluir o curso, você receberá um certificado reconhecido que comprova suas habilidades como profissional de micropigmentação.
+  </p>
+</section>
+
 
   <section class="muted-section">
     <h2>Resultados Reais</h2>
