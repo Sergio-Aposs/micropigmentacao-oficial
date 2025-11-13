@@ -30,7 +30,7 @@
     header {
       position: relative;
       height: 90vh;
-      background: linear-gradient(rgba(43, 0, 59, 0.8), rgba(43, 0, 59, 0.9)), url('Micropigmentação Esfumaçada') center/cover no-repeat;
+      background: linear-gradient(rgba(43, 0, 59, 0.7), rgba(43, 0, 59, 0.9)), url('Micropigmentação Esfumaçada.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -42,7 +42,12 @@
       position: absolute;
       inset: 0;
       backdrop-filter: blur(3px);
+      z-index: 0;
     }
+
+    header * {
+      position: relative;
+      z-index: 1;
 
     header h1 {
       position: relative;
@@ -185,7 +190,8 @@
 
   <header>
     <div>
-      <h1>Curso de Micropigmentação Profissional com Certificado</h1>
+      <h1>Treinamento Profissional de Micropigmentação com Priscila Rodrigues</h1>
+      <p>Aprenda técnicas avançadas de micropigmentação para sobrancelhas e lábios, com suporte e comunidade exclusiva.</p>
       <a href="#" class="btn">Quero me inscrever agora</a>
     </div>
   </header>
