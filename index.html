@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Treinamento Profissional de Micropigmentação com Priscila Rodrigues</title>
+  <title>Curso de Micropigmentação Profissional</title>
   <style>
     :root {
       --purple: #2b003b;
@@ -27,28 +27,22 @@
       overflow-x: hidden;
     }
 
-   header {
-  position: relative;
-  background: linear-gradient(rgba(43, 0, 59, 0.7), rgba(43, 0, 59, 0.9)), url('topo.jpg') center/cover no-repeat;
-  color: var(--white);
-  text-align: center;
-  padding: 100px 20px;
-  overflow: hidden;
-}
+    header {
+      position: relative;
+      height: 90vh;
+      background: linear-gradient(rgba(43, 0, 59, 0.8), rgba(43, 0, 59, 0.9)), url('Micropigmentação Esfumaçada') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
 
-header::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  backdrop-filter: blur(3px); /* deixa só o fundo esfumaçado */
-  z-index: 0;
-}
-
-/* e isso garante que o conteúdo fique por cima do blur */
-header * {
-  position: relative;
-  z-index: 1;
-}
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      backdrop-filter: blur(3px);
+    }
 
     header h1 {
       position: relative;
@@ -191,8 +185,7 @@ header * {
 
   <header>
     <div>
-      <h1>Treinamento Profissional de Micropigmentação com Priscila Rodrigues</h1>
-      <p>Aprenda técnicas avançadas de micropigmentação para sobrancelhas e lábios, com suporte e comunidade exclusiva.</p>
+      <h1>Curso de Micropigmentação Profissional com Certificado</h1>
       <a href="#" class="btn">Quero me inscrever agora</a>
     </div>
   </header>
