@@ -1,158 +1,275 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Curso de Micropigmentação Profissional</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#0b0b0b;
-  --card:#0f0f0f;
-  --muted:#bfbfbf;
-  --accent:#b8860b;
-  --white:#ffffff;
-}
-*{box-sizing:border-box;}
-body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);color:var(--white);}
-a{color:inherit;text-decoration:none;}
-header{display:flex;justify-content:space-between;align-items:center;padding:20px;}
-header h1{font-family:'Playfair Display',serif;font-size:22px;margin:0;}
-header nav a{margin-left:16px;color:var(--muted);cursor:pointer;}
-.hero{position:relative;display:flex;align-items:center;justify-content:center;height:500px;overflow:hidden;}
-.hero img{position:absolute;width:100%;height:100%;object-fit:cover;filter:brightness(0.5);transition:transform 1s ease;}
-.hero img.animate{transform:scale(1.05);}
-.hero .hero-text{position:relative;z-index:2;text-align:center;}
-.hero .hero-text h2{font-family:'Playfair Display',serif;font-size:34px;margin-bottom:12px;}
-.hero .hero-text p{color:var(--muted);margin-bottom:18px;}
-.cta-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
-.btn-primary{background:var(--accent);color:var(--bg);padding:14px 20px;border-radius:12px;border:none;font-weight:700;cursor:pointer;}
-section{padding:30px 20px;}
-.features{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:16px;}
-.feature{background:var(--card);padding:14px;border-radius:10px;text-align:center;border:1px solid rgba(255,255,255,0.03);}
-.feature h4{color:var(--accent);margin-bottom:6px;}
-.feature p{color:var(--muted);margin:0;font-size:14px;}
-.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px;}
-.gallery img{width:100%;height:160px;object-fit:cover;border-radius:8px;transition: transform 0.8s ease, opacity 0.8s ease;opacity:0;}
-.gallery img.visible{opacity:1;transform:scale(1.02);}
-.courses-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;margin-top:16px;}
-.course-card{background:var(--card);padding:10px;border-radius:10px;text-align:center;border:1px solid rgba(255,255,255,0.03);transition: transform 0.5s ease;}
-.course-card:hover{transform:translateY(-4px);}
-.course-card img{width:100%;height:80px;object-fit:cover;border-radius:6px;margin-bottom:6px;}
-.course-title{font-size:13px;color:var(--white);font-weight:600;}
-.course-desc{font-size:12px;color:var(--muted);margin-top:4px;}
-.faq-item{background:var(--card);border-radius:10px;padding:12px;margin-bottom:10px;border:1px solid rgba(255,255,255,0.03);overflow:hidden;}
-.faq-question{display:flex;justify-content:space-between;align-items:center;cursor:pointer;}
-.faq-question h4{margin:0;font-size:15px;}
-.faq-answer{max-height:0;transition:max-height 0.4s ease, padding 0.3s;overflow:hidden;color:var(--muted);margin-top:8px;}
-.faq-answer.open{padding-top:8px;}
-footer{margin-top:28px;padding:18px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid rgba(255,255,255,0.03);}
-@media(max-width:1000px){.features{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(2,1fr)}.courses-grid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:600px){.courses-grid{grid-template-columns:repeat(2,1fr)}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de Micropigmentação Profissional</title>
+  <style>
+    :root {
+      --purple: #2b003b;
+      --light-purple: #8e24aa;
+      --pink: #ff66a3;
+      --white: #fff;
+      --muted: #f7f2f9;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: var(--purple);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    header {
+      position: relative;
+      height: 90vh;
+      background: linear-gradient(rgba(43, 0, 59, 0.8), rgba(43, 0, 59, 0.9)), url('https://images.unsplash.com/photo-1608405742642-87e50f3c0a2b?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      backdrop-filter: blur(8px);
+    }
+
+    header h1 {
+      position: relative;
+      font-size: 2.5rem;
+      color: var(--pink);
+      z-index: 1;
+      max-width: 800px;
+      line-height: 1.4;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 15px 40px;
+      background-color: var(--pink);
+      color: var(--white);
+      font-weight: bold;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: var(--light-purple);
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    section h2 {
+      color: var(--pink);
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .certificado {
+      background-color: var(--muted);
+      color: var(--purple);
+      border-radius: 20px;
+      padding: 50px 30px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .galeria img {
+      width: 100%;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    .cursos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .curso {
+      background-color: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .curso:hover {
+      transform: translateY(-5px);
+    }
+
+    .curso img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .faq {
+      text-align: left;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      cursor: pointer;
+      padding: 20px;
+      font-weight: bold;
+      color: var(--pink);
+      position: relative;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 20px;
+      background-color: rgba(0,0,0,0.2);
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    footer {
+      background-color: var(--light-purple);
+      color: var(--white);
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animar {
+      animation: fadeIn 1s ease forwards;
+    }
+
+  </style>
 </head>
 <body>
-<header>
-<h1>Curso de Micropigmentação Profissional</h1>
-<nav><a href="#courses">Cursos</a><a href="#faq">FAQ</a></nav>
-</header>
-<div class="hero">
-<img src="https://images.unsplash.com/photo-1621593102102-3b1c3d6b0b8f?auto=format&fit=crop&w=1200&q=80" alt="Hero" class="animate">
-<div class="hero-text">
-<h2>Treinamento Profissional de Micropigmentação com Priscila Rodrigues</h2>
-<p>Aprenda técnicas avançadas de micropigmentação para sobrancelhas e lábios, com suporte e comunidade exclusiva.</p>
-<div class="cta-row">
-<button class="btn-primary" onclick="window.location.href='#'">Quero me inscrever agora</button>
-<button class="btn-primary" onclick="document.getElementById('courses').scrollIntoView({behavior:'smooth'})">Ver Cursos Inclusos</button>
-</div>
-</div>
-</div>
-<section id="benefits">
-<h3>O que você recebe</h3>
-<div class="features">
-<div class="feature"><h4>Certificado</h4><p>Comprovante de conclusão</p></div>
-<div class="feature"><h4>Suporte</h4><p>30 dias de acompanhamento</p></div>
-<div class="feature"><h4>Comunidade</h4><p>Grupo exclusivo de alunas</p></div>
-<div class="feature"><h4>Materiais</h4><p>Apostilas e guias práticos</p></div>
-</div>
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1619962051301-6b0b3be8a197?auto=format&fit=crop&w=600&q=80" alt="Lábios 1">
-<img src="https://images.unsplash.com/photo-1620785473693-3f0f7c3b6a6b?auto=format&fit=crop&w=600&q=80" alt="Lábios 2">
-<img src="https://images.unsplash.com/photo-1631630334773-7ea1f6f2a0c6?auto=format&fit=crop&w=600&q=80" alt="Sobrancelha 1">
-<img src="https://images.unsplash.com/photo-1624957938063-1f1b1f5bd3d8?auto=format&fit=crop&w=600&q=80" alt="Sobrancelha 2">
-</div>
-</section>
-<section id="courses">
-<h3>Cursos Inclusos</h3>
-<div class="courses-grid">
-<div class="course-card"><img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=600&q=60" alt=""><div class="course-title">Como imprimir o certificado</div><div class="course-desc">Descrição do curso</div></div>
-<div class="course-card"><img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=600&q=60" alt=""><div class="course-title">Design de sobrancelhas</div><div class="course-desc">Descrição do curso</div></div>
-<div class="course-card"><img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=600&q=60" alt=""><div class="course-title">Biossegurança</div><div class="course-desc">Descrição do curso</div></div>
-<div class="course-card"><img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=600&q=60" alt=""><div class="course-title">Anamnese</div><div class="course-desc">Descrição do curso</div></div>
-<div class="course-card"><img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=600&q=60" alt=""><div class="course-title">Colorimetria</div><div class="course-desc">Descrição do curso</div></div>
-<div class="course-card"><img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=600&q=60" alt=""><div class="course-title">Microblading</div><div class="course-desc">Descrição do curso</div></div>
-<div class="course-card"><img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=600&q=60" alt=""><div class="course-title">Treino com dermógrafo</div><div class="course-desc">Descrição do curso</div></div>
-<div class="course-card"><img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=600&q=60" alt=""><div class="course-title">Shadow Line</div><div class="course-desc">Descrição do curso</div></div>
-<div class="course-card"><img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=600&q=60" alt=""><div class="course-title">Shadow</div><div class="course-desc">Descrição do curso</div></div>
-<div class="course-card"><img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=600&q=60" alt=""><div class="course-title">Anestésico</div><div class="course-desc">Descrição do curso</div></div>
-<div class="course-card"><img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=600&q=60" alt=""><div class="course-title">Fogocitose</div><div class="course-desc">Descrição do curso</div></div>
-<div class="course-card"><img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=600&q=60" alt=""><div class="course-title">Correção</div><div class="course-desc">Descrição do curso</div></div>
-<div class="course-card"><img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=600&q=60" alt=""><div class="course-title">Aula Prática</div><div class="course-desc">Descrição do curso</div></div>
-<div class="course-card"><img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=600&q=60" alt=""><div class="course-title">Microlabial</div><div class="course-desc">Descrição do curso</div></div>
-</div>
-<div class="cta-row" style="margin-top:12px;">
-<button class="btn-primary" onclick="window.location.href='#'">Quero me inscrever agora</button>
-</div>
-</section>
-<section id="faq">
-<h3>Perguntas Frequentes</h3>
-<div class="faq-item">
-<div class="faq-question" onclick="toggleFAQ(0)"><h4>Como eu emito o certificado?</h4><div>+</div></div>
-<div id="faq-0" class="faq-answer"><p>Após concluir o curso, você receberá instruções para gerar o certificado em PDF.</p></div>
-</div>
-<div class="faq-item">
-<div class="faq-question" onclick="toggleFAQ(1)"><h4>O curso oferece suporte e comunidade?</h4><div>+</div></div>
-<div id="faq-1" class="faq-answer"><p>Sim, inclui suporte e grupo exclusivo de alunas.</p></div>
-</div>
-<div class="faq-item">
-<div class="faq-question" onclick="toggleFAQ(2)"><h4>Preciso ter experiência prévia?</h4><div>+</div></div>
-<div id="faq-2" class="faq-answer"><p>Não, o curso é para iniciantes e profissionais.</p></div>
-</div>
-<div class="faq-item">
-<div class="faq-question" onclick="toggleFAQ(3)"><h4>Qual o tempo de acesso?</h4><div>+</div></div>
-<div id="faq-3" class="faq-answer"><p>Acesso vitalício ao conteúdo.</p></div>
-</div>
-<div class="faq-item">
-<div class="faq-question" onclick="toggleFAQ(4)"><h4>Há certificação reconhecida?</h4><div>+</div></div>
-<div id="faq-4" class="faq-answer"><p>Sim, certificado de conclusão válido.</p></div>
-</div>
-</section>
-<footer>
-<p>Este site é uma página de divulgação independente criada por afiliado autorizado. © 2025</p>
-</footer>
-<script>
-function toggleFAQ(i){
-  var el=document.getElementById('faq-'+i);
-  var all=document.querySelectorAll('.faq-answer');
-  var signs=document.querySelectorAll('.faq-question div');
-  if(el.classList.contains('open')){
-    el.style.maxHeight=null;
-    el.classList.remove('open');
-    signs[i].textContent='+';
-  }else{
-    all.forEach(a=>{a.style.maxHeight=null;a.classList.remove('open');});
-    signs.forEach(s=>s.textContent='+');
-    el.classList.add('open');
-    el.style.maxHeight=el.scrollHeight+'px';
-    signs[i].textContent='−';
-  }
-}
-window.addEventListener('scroll',function(){
-  document.querySelectorAll('.gallery img').forEach(img=>{
-    var rect=img.getBoundingClientRect();
-    if(rect.top < window.innerHeight-100){img.classList.add('visible');}
-  });
-});
-</script>
+
+  <header>
+    <div>
+      <h1>Curso de Micropigmentação Profissional com Certificado</h1>
+      <a href="#" class="btn">Quero me inscrever agora</a>
+    </div>
+  </header>
+
+  <section class="certificado animar">
+    <h2>Certificação Profissional</h2>
+    <p>Ao concluir o treinamento, você receberá um <strong>certificado profissional reconhecido</strong> que comprova suas habilidades em micropigmentação, abrindo portas para novas oportunidades na área da estética.</p>
+  </section>
+
+  <section class="animar">
+    <h2>Resultados Reais</h2>
+    <div class="galeria">
+      <img src="https://images.unsplash.com/photo-1603126856316-c2dfd9f0bb50?auto=format&fit=crop&w=500&q=80" alt="Sobrancelha pigmentada">
+      <img src="https://images.unsplash.com/photo-1618354691386-cf94d729ab4f?auto=format&fit=crop&w=500&q=80" alt="Sobrancelha pigmentada">
+      <img src="https://images.unsplash.com/photo-1604937455096-d8a2b84d90b0?auto=format&fit=crop&w=500&q=80" alt="Lábios pigmentados">
+      <img src="https://images.unsplash.com/photo-1618354691324-9b6fdfc89f36?auto=format&fit=crop&w=500&q=80" alt="Lábios pigmentados">
+    </div>
+  </section>
+
+  <section class="animar">
+    <h2>Conteúdo do Curso</h2>
+    <div class="cursos">
+      <div class="curso"><img src="https://via.placeholder.com/200"><h3>Como imprimir o certificado</h3><p></p></div>
+      <div class="curso"><img src="https://via.placeholder.com/200"><h3>Design de sobrancelhas</h3><p></p></div>
+      <div class="curso"><img src="https://via.placeholder.com/200"><h3>Biossegurança</h3><p></p></div>
+      <div class="curso"><img src="https://via.placeholder.com/200"><h3>Anamnese</h3><p></p></div>
+      <div class="curso"><img src="https://via.placeholder.com/200"><h3>Colorimetria</h3><p></p></div>
+      <div class="curso"><img src="https://via.placeholder.com/200"><h3>Microblading</h3><p></p></div>
+      <div class="curso"><img src="https://via.placeholder.com/200"><h3>Treino com dermógrafo</h3><p></p></div>
+      <div class="curso"><img src="https://via.placeholder.com/200"><h3>Shadow line</h3><p></p></div>
+      <div class="curso"><img src="https://via.placeholder.com/200"><h3>Shadow</h3><p></p></div>
+      <div class="curso"><img src="https://via.placeholder.com/200"><h3>Anestésico</h3><p></p></div>
+      <div class="curso"><img src="https://via.placeholder.com/200"><h3>Fagocitose</h3><p></p></div>
+      <div class="curso"><img src="https://via.placeholder.com/200"><h3>Correção</h3><p></p></div>
+      <div class="curso"><img src="https://via.placeholder.com/200"><h3>Aula prática</h3><p></p></div>
+      <div class="curso"><img src="https://via.placeholder.com/200"><h3>Microlabial</h3><p></p></div>
+    </div>
+  </section>
+
+  <section class="faq animar">
+    <h2>Perguntas Frequentes</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">Quanto tempo tenho acesso ao curso?</div>
+      <div class="faq-answer">Você terá acesso completo ao conteúdo por 1 ano, podendo assistir e revisar as aulas quantas vezes quiser.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Posso assistir pelo celular?</div>
+      <div class="faq-answer">Sim! Todo o conteúdo é 100% online e pode ser acessado de qualquer dispositivo.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">O curso emite certificado?</div>
+      <div class="faq-answer">Sim, você receberá um certificado profissional reconhecido ao concluir todas as aulas.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Há suporte durante o curso?</div>
+      <div class="faq-answer">Sim, você contará com suporte direto para tirar dúvidas e acompanhar seu progresso.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Preciso ter experiência anterior?</div>
+      <div class="faq-answer">Não! O treinamento é completo e ensina desde o básico até as técnicas avançadas de micropigmentação.</div>
+    </div>
+  </section>
+
+  <section style="text-align:center; margin-bottom:80px;">
+    <a href="#" class="btn">Quero me inscrever agora</a>
+  </section>
+
+  <footer>
+    este site é uma página de divulgação independente criada por afiliado autorizado. © 2025
+  </footer>
+
+  <script>
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      item.querySelector('.faq-question').addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+
 </body>
 </html>
