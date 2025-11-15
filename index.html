@@ -167,6 +167,46 @@
     .center-title {
     text-align: center;
 }
+
+    .secao-micro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.texto-micro h2 {
+  color: #ffffff; /* Branco */
+  font-size: 28px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.texto-micro .verde {
+  color: #00b050; /* Verde profissional */
+}
+
+.imagem-micro img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+    @media (max-width: 768px) {
+  .secao-micro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imagem-micro img {
+    max-width: 350px;
+  }
+}
+
   </style>
 </head>
 <body>
