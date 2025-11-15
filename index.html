@@ -46,7 +46,7 @@
 
     .hero-text {
       position: absolute;
-      top: 30%;
+      top: 18%;
       width: 100%;
       text-align: center;
       color: var(--purple);
@@ -61,6 +61,53 @@
       filter: none;
       margin-top: 15px;
     }
+
+    /* ============================
+   HERO RESPONSIVO
+============================ */
+@media (max-width: 768px) {
+
+  .hero {
+    height: 55vh; /* evita corte excessivo da imagem */
+    background-position: center top; /* foca melhor no mobile */
+  }
+
+  .hero-text {
+    top: 22%; /* ajusta a altura do texto */
+    padding: 0 20px; /* evita que o texto encoste nas laterais */
+  }
+
+  .hero-text h1 {
+    font-size: 1.9rem; /* reduz para caber na tela */
+    line-height: 1.3;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+}
+
+/* Para celulares bem pequenos (iPhone SE, Galaxy J2) */
+@media (max-width: 480px) {
+
+  .hero {
+    height: 50vh;
+  }
+
+  .hero-text {
+    top: 25%;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+}
+
 
     .btn {
       display: inline-block;
