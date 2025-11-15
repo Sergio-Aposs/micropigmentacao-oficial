@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://curso-micropigmentacao.vercel.app/sitemap.xml
