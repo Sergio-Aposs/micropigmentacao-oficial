@@ -255,6 +255,25 @@ href="data:image/svg+xml;utf8,
       }
     }
 
+/* ==== GRID DE DEPOIMENTOS (ISOLADO) ==== */
+.depoimentos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.depoimentos-grid img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  object-fit: cover;
+}
 
 
 
@@ -310,7 +329,7 @@ href="data:image/svg+xml;utf8,
  <section class="section-light" aria-label="resultados">
   <h2>Confira os <strong>Depoimentos</strong> de algumas alunas:</h2>
 
-  <div class="curso-grid resultados-grid">
+  <div class="depoimentos-grid">
     <img src="Depoimento1.webp" alt="Depoimento 1">
     <img src="Depoimento2.webp" alt="Depoimento 2">
     <img src="Depoimento3.webp" alt="Depoimento 3">
