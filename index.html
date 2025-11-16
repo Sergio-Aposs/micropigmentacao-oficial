@@ -307,6 +307,35 @@ href="data:image/svg+xml;utf8,
   }
 }
 
+    /* AJUSTES APENAS PARA A SEÇÃO RESULTADOS REAIS */
+.section-dark .resultados-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centraliza horizontalmente */
+  gap: 15px; /* Espaçamento padrão entre as imagens */
+}
+
+/* Ajustes das imagens */
+.section-dark .resultados-grid img {
+  width: 100%;
+  max-width: 220px; /* Mantém as imagens proporcionais e centralizadas */
+  height: auto;
+  display: block;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .section-dark .resultados-grid {
+    gap: 10px; /* Diminui o espaço entre elas */
+    justify-content: center; /* Garante que fiquem alinhadas ao centro */
+  }
+
+  .section-dark .resultados-grid img {
+    max-width: 80%; /* Faz cada imagem ficar mais centralizada e elegante */
+    margin: 0 auto; /* Centraliza de verdade no mobile */
+  }
+}
+
     
 
   </style>
