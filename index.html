@@ -316,6 +316,24 @@ href="data:image/svg+xml;utf8,
 
 }
 
+    /* Centralizar as imagens no mobile */
+@media (max-width: 768px) {
+  .galeria-imagens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center !important; /* Centraliza horizontalmente */
+    align-items: center;
+    text-align: center;
+    gap: 20px; /* Espaço entre elas */
+    width: 100%;
+  }
+
+  .galeria-imagens img {
+    margin: 0 auto; /* Garante que cada imagem fique centralizada */
+    display: block;
+  }
+}
+
 
   </style>
 </head>
