@@ -275,7 +275,39 @@ href="data:image/svg+xml;utf8,
   object-fit: cover;
 }
 
+/* ======= GRID DE DEPOIMENTOS (EXCLUSIVO) ======= */
 
+.depoimentos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 por linha no desktop */
+  gap: 15px; /* reduz espaço horizontal e vertical */
+  justify-items: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+/* Ajuste das imagens */
+.depoimentos-grid img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ======= MOBILE ======= */
+@media (max-width: 768px) {
+  .depoimentos-grid {
+    grid-template-columns: 1fr; /* 1 imagem por linha */
+    gap: 8px; /* diminui bastante o espaço entre imagens no mobile */
+  }
+
+  .depoimentos-grid img {
+    max-width: 100%;
+  }
+}
+
+    
 
   </style>
 </head>
