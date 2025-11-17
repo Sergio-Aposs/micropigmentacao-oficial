@@ -338,6 +338,39 @@ href="data:image/svg+xml;utf8,
   }
 }
 
+/* ===== BOTÃO PADRÃO ===== */
+.btn {
+  display: inline-block;
+  background: #ff8a80; /* cor do botão */
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 14px 40px;
+  border-radius: 50px;
+  text-decoration: none !important;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Remove sublinhado de links dentro do botão */
+.btn a {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+/* ===== HOVER ===== */
+.btn:hover {
+  background: #ff6f61; /* cor ao passar mouse */
+  color: #ffffff;
+  transform: scale(1.03);
+}
+
+/* Garante que nada sobrescreva */
+.btn, .btn a {
+  cursor: pointer;
+}
+
+
 
   </style>
 </head>
